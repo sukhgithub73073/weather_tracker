@@ -1,0 +1,70 @@
+name: weathertracker
+description: "Weather Tracker – a modern, production-ready weather app built with Flutter and GetX."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management, routing & dependency injection
+  get: ^4.7.2
+
+  # Networking
+  dio: ^5.7.0
+  connectivity_plus: ^6.1.0
+
+  # Configuration & local storage
+  flutter_dotenv: ^5.2.1
+  get_storage: ^2.1.1
+
+  # Location
+  geolocator: ^13.0.2
+
+  # UI
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.2
+  shimmer: ^3.0.0
+  cached_network_image: ^3.4.1
+
+  # Weather map (optional feature – toggled in core/constants/feature_flags.dart)
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+
+  # Notifications
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.0
+  flutter_timezone: ^3.0.0
+
+  # Utilities
+  intl: ^0.20.2
+  package_info_plus: ^8.1.0
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.4
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env
+    - assets/images/
+
+# Run `dart run flutter_launcher_icons` after placing the real logo at assets/images/logo.png
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: "#1565C0"
+  adaptive_icon_foreground: "assets/images/logo.png"
